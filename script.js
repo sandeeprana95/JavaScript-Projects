@@ -51,7 +51,9 @@ function Edit(data,index){
     })
     const EditVal = prompt('Edit the task ,', FindArr);
   
-    ParsedArr.splice(index, 1, EditVal)
+   if(EditVal !== null){
+        ParsedArr.splice(index, 1, EditVal)
+   }
     localStorage.setItem("Data", JSON.stringify(ParsedArr))
 
     LoadArr();
